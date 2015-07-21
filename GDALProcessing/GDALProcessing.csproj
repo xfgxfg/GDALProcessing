@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8082B702-4263-4A28-BEAB-A92874DAF9D9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GDALProcessing</RootNamespace>
+    <AssemblyName>GDALProcessing</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GdalAlgInterface, Version=1.2014.3.26, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\GdalAlgInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="gdalconst_csharp, Version=1.0.4738.27198, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\gdalconst_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="gdal_csharp, Version=1.0.4738.27198, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\gdal_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ogr_csharp, Version=1.0.4738.27197, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\ogr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="osr_csharp, Version=1.0.4738.27197, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\osr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\clsWinrar.cs" />
+    <Compile Include="App_Code\DataBaseOperate.cs" />
+    <Compile Include="App_Code\ExportDataToExcel.cs" />
+    <Compile Include="App_Code\FileManage.cs" />
+    <Compile Include="App_Code\ReadShape.cs" />
+    <Compile Include="App_Code\StringFormater.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageClipForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImageClipForm.designer.cs">
+      <DependentUpon>ImageClipForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayerStackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LayerStackForm.designer.cs">
+      <DependentUpon>LayerStackForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReSampleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReSampleForm.designer.cs">
+      <DependentUpon>ReSampleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VectorToRasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VectorToRasterForm.designer.cs">
+      <DependentUpon>VectorToRasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VICalculationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VICalculationForm.designer.cs">
+      <DependentUpon>VICalculationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIStatictisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIStatictisForm.designer.cs">
+      <DependentUpon>VIStatictisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIStatictisBatchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIStatictisBatchForm.designer.cs">
+      <DependentUpon>VIStatictisBatchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIStatictisBatchToGrid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIStatictisBatchToGrid.designer.cs">
+      <DependentUpon>VIStatictisBatchToGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadiometricCorrectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadiometricCorrectionForm.designer.cs">
+      <DependentUpon>RadiometricCorrectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnCompressionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnCompressionForm.designer.cs">
+      <DependentUpon>UnCompressionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPCBatchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPCBatchForm.designer.cs">
+      <DependentUpon>RPCBatchForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageClipForm.resx">
+      <DependentUpon>ImageClipForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayerStackForm.resx">
+      <DependentUpon>LayerStackForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ReSampleForm.resx">
+      <DependentUpon>ReSampleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VectorToRasterForm.resx">
+      <DependentUpon>VectorToRasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VICalculationForm.resx">
+      <DependentUpon>VICalculationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIStatictisForm.resx">
+      <DependentUpon>VIStatictisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIStatictisBatchForm.resx">
+      <DependentUpon>VIStatictisBatchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIStatictisBatchToGrid.resx">
+      <DependentUpon>VIStatictisBatchToGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadiometricCorrectionForm.resx">
+      <DependentUpon>RadiometricCorrectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnCompressionForm.resx">
+      <DependentUpon>UnCompressionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPCBatchForm.resx">
+      <DependentUpon>RPCBatchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
